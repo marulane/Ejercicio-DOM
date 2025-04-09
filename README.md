@@ -18,6 +18,6 @@ git commit -m "mensaje"
 git push origin main
 ```
 
->Vista Prevua del index.html
+>Vista Previa del index.html
 
 ![Index](https://raw.githubusercontent.com/marulane/Ejercicio-DOM/refs/heads/main/images/index.png)
