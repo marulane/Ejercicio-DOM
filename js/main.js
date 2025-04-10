@@ -25,6 +25,10 @@ let otrosElementos = document.querySelectorAll("ul>li");
 //Boton 1
 let btnMostrar = document.getElementById("btnMostrar");
 
+let txtRFC = document.getElementById("txtRFC");
+let txtCURP = document.getElementById("txtCURP");
+let txtTel = document.getElementById("txtTel");
+
 //console.log(listas[0]); //accediendo al elemento como si fuera un arreglo
 console.log(listas.item(1)); // segunda forma de acceder al elemento
 
@@ -73,7 +77,42 @@ btnMostrar.addEventListener("click", function(event){
     listas.item(1).insertAdjacentHTML("beforeend", 
         `<li class="list-group-item>Before End Item</li>`);
 
-})
+    
+
+}); //btnMostrar
+
+//Se ejecuta cuando termina de cargar todods los elementos
+
+window.addEventListener("load", function(event){
+    console.log("Se terminó de cargar la página");
+}); //Load
+
+//Forma automatizada de 
+function txtToUpper(event){
+    event.preventDefault();
+    event.target.value = event.target.value.trim().toUpperCase();
+}
+
+txtCURP.addEventListener("blur",txtToUpper);
+txtRFC.addEventListener("blur", txtToUpper);
+
+// // blur-> cuando el elemento pierde foco ; cuando sale del campo
+// txtRFC.addEventListener("blur", function(event){
+//     event.preventDefault();
+//     txtRFC.value = txtRFC.value.toUpperCase();
+//     //Target es el elemento al que se hace referencia en esta funcion //txtRFC
+//     event.target.value = event.target.value.toUpperCase;
+// })//txtRFC
+
+// txtCURP.addEventListener("blur", function(event){
+//     event.preventDefault();
+//     txtCURP.value = txtCURP.value.toUpperCase();
+// })//txtCURP
+
+//Extrae desde inicio hasta pero sin incluir el rango final
+txtTel.addEventListener("blur",function(event){
+    txtTel.value = txtTel.value.trim().slice(0, 10);
+});//txtTelefono
 
 
 
@@ -89,6 +128,8 @@ function modifica(){
 
 
 }
+
+
 
 
 

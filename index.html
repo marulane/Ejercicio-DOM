@@ -7,19 +7,35 @@
     <title>DOM - Ejercicios</title>
 </head>
 <body>
-    <!-- id es el identificador unico de la etiqueta -->
-    <h1 id="encabezado1">DOM Ejercicio</h1>
-    <h2 id="encabezado2">DOM Ejercicio</h2>
-    <em onclick="modifica()">Cursiva</em>
-    <hr>
-<button onclick="modifica()" id="btnMostrar" type="submit" class="btn btn-primary"
-        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-  Imprimir en consola
-</button>
-
     <!-- main es una etiqueta semantica que indica el contenido principal de la pagina -->
-     <!-- la clase container agrega un margen a los lados del elemento al que se agrega, container-fluid abarca todo el ancho de la pagina -->
+    <!-- la clase container agrega un margen a los lados del elemento al que se agrega, container-fluid abarca todo el ancho de la pagina -->
     <main class="container">
+        <!-- id es el identificador unico de la etiqueta -->
+        <h1 id="encabezado1">DOM Ejercicio</h1>
+        <h2 id="encabezado2">DOM Ejercicio</h2>
+        <em onclick="modifica()">Cursiva</em>
+        <hr>
+
+        <form>
+            <div class="mb-3">
+                <label for="txtRFC" class="form-label">RFC:</label>
+                <input type="text" name="form-control" id="txtRFC" placeholder="Escribe tu RFC">
+            </div>
+            <div class="mb-3">
+                <label for="txtCURP" class="form-label">CURP:</label>
+                <input type="text" name="form-control" id="txtCURP" placeholder="Escribe tu RFC">
+            </div>
+            <div class="mb-3">
+                <label for="txtTel" class="form-label">Teléfono:</label>
+                <input type="text" name="form-control" id="txtTel" placeholder="Escribe tu teléfono">
+            </div>
+        </form>
+
+        <button onclick="modifica()" id="btnMostrar" type="submit" class="btn btn-primary"
+                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+        Imprimir en consola
+        </button>
+
         <ul class="list-group">
             <li class="list-group-item">An item</li>
             <li class="list-group-item">A second item</li>
